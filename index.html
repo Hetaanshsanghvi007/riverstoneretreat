@@ -1,1 +1,328 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Boutique hotel in the heart of the city. Direct, secure booking, modern rooms, exclusive deals for direct reservations." />
+  <meta name="keywords" content="hotel, boutique hotel, book hotel, best hotel in city, direct booking, no commission" />
+  <meta name="robots" content="index, follow" />
+  <title>Riverstone Retreat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="index.css">
+</head>
+<body itemscope itemtype="https://schema.org/Hotel">
+  <header>
+    <nav class="nav container" aria-label="Primary">
+      <a class="logo" href="#" aria-label="Azure Bay Hotel Home">
+        <span class="mark" aria-hidden="true"></span>
+        <span itemprop="name">Riverstone Retreat</span>
+      </a>
+      <div class="navlinks" role="navigation">
+        <a href="#rooms">Rooms</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <!-- Multilingual (static for demo) -->
+        <span class="badge" aria-label="Language selector">EN ▾</span>
+        <a class="cta" href="#booking">Book Now</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO + BOOKING ENGINE -->
+    <section class="hero" id="home" role="banner" aria-label="Hero with booking">
+      <div class="scrim" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <span class="eyebrow"><b>Book Direct & Save 15%</b> • Free breakfast • Late checkout</span>
+          <h1>Stay in Style. Book Direct with <span style="color:var(--brand)">Confidence</span>.</h1>
+          <p>Chic, modern rooms in the heart of the city. Secure checkout, instant confirmation, and exclusive perks for direct bookings. No hidden fees, ever.</p>
+
+          <div class="booking" id="booking" aria-labelledby="booking-title">
+            <form method="post" action="/reserve" autocomplete="on">
+              <div class="field">
+                <label for="checkin">Check-in</label>
+                <input type="date" id="checkin" name="checkin" required />
+              </div>
+              <div class="field">
+                <label for="checkout">Check-out</label>
+                <input type="date" id="checkout" name="checkout" required />
+              </div>
+              <div class="field">
+                <label for="guests">Guests</label>
+                <select id="guests" name="guests" required>
+                  <option value="1">1 Adult</option>
+                  <option value="2" selected>2 Adults</option>
+                  <option value="3">3 Adults</option>
+                  <option value="4">4 Adults</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="promo">Promo code (optional)</label>
+                <input type="text" id="promo" name="promo" placeholder="DIRECT15" />
+              </div>
+              <div class="field" style="align-self:end">
+                <button class="btn-primary" type="submit" aria-label="Search rooms">Book Now</button>
+              </div>
+            </form>
+            <div class="booking-note"><span class="lock"></span> Direct & secure booking • SSL protected • No commissions</div>
+          </div>
+
+          <div class="band" role="note" aria-label="Direct booking incentives">
+            <strong>Direct Booking Perks:</strong> Free breakfast • Priority room upgrade • 2pm late checkout • Members-only rates.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROOMS -->
+    <section class="container" id="rooms">
+      <h2>Our Rooms</h2>
+      <p class="sub">Thoughtfully designed spaces with plush bedding, rainfall showers, and fast Wi‑Fi. Choose the perfect fit.</p>
+      <div class="grid rooms">
+        <!-- Deluxe King -->
+        <article class="room" itemscope itemtype="https://schema.org/HotelRoom">
+          <div class="media" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=1600&auto=format&fit=crop" alt="Deluxe King room with city view" itemprop="photo">
+          </div>
+          <div class="content">
+            <span class="pill">Deluxe King</span>
+            <p itemprop="description">King bed • 28 m² • City view • Rainfall shower • Smart TV • Workspace.</p>
+            <div class="amenities" id="amenities" aria-label="Amenities list">
+              <span>🛏️ Memory-foam mattress</span>
+              <span>📶 300 Mbps Wi‑Fi</span>
+              <span>☕ Nespresso</span>
+              <span>🧴 Organic toiletries</span>
+            </div>
+            <div class="price">
+              <div>
+                <strong itemprop="bed">From $129/night</strong>
+                <div class="stars" aria-label="Rating">★★★★★</div>
+              </div>
+              <a class="cta" href="#booking">Book Now</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Twin City -->
+        <article class="room" itemscope itemtype="https://schema.org/HotelRoom">
+          <div class="media"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=1600&auto=format&fit=crop" alt="Twin room with warm lighting" itemprop="photo"></div>
+          <div class="content">
+            <span class="pill">Twin City</span>
+            <p itemprop="description">Two twin beds • 24 m² • Ideal for friends or colleagues • Soundproofed.</p>
+            <div class="amenities">
+              <span>🛡️ In-room safe</span>
+              <span>🖥️ 50" TV</span>
+              <span>❄️ Individual climate</span>
+              <span>🚿 Rain shower</span>
+            </div>
+            <div class="price">
+              <div>
+                <strong>From $109/night</strong>
+                <div class="stars">★★★★☆</div>
+              </div>
+              <a class="cta" href="#booking">Book Now</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Suite -->
+        <article class="room" itemscope itemtype="https://schema.org/HotelRoom">
+          <div class="media"><img src="https://media.istockphoto.com/id/1452529483/photo/3d-render-of-luxury-hotel-room.jpg?s=612x612&w=0&k=20&c=TzxpiZWHSgMPAZ6lsRKVsG5McmfrQ-bxoPpC8cQLrbk=" alt="Spacious suite with lounge" itemprop="photo"></div>
+          <div class="content">
+            <span class="pill">Executive Suite</span>
+            <p itemprop="description">Separate lounge • 42 m² • Panoramic view • Soaking tub • Perfect for longer stays.</p>
+            <div class="amenities">
+              <span>🛎️ 24/7 concierge</span>
+              <span>🛁 Bathtub</span>
+              <span>🧳 Walk‑in closet</span>
+              <span>🖨️ Business desk</span>
+            </div>
+            <div class="price">
+              <div>
+                <strong>From $189/night</strong>
+                <div class="stars">★★★★★</div>
+              </div>
+              <a class="cta" href="#booking">Book Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- VISUALS: VIRTUAL TOUR + VIDEO -->
+    <section class="container" aria-label="Visual tours">
+  <h2>See the Space</h2>
+  <p class="sub">High-resolution photos, a virtual tour, and a short video so you know exactly what to expect.</p>
+  
+  <div class="media-wrap">
+    <!-- Image Gallery -->
+    <figure class="tour">
+      <img src="hotel1.jpg" alt="Hotel Lobby" style="width:100%; max-height:400px; object-fit:cover; margin-bottom:10px;" />
+      <img src="hotel2.jpg" alt="Hotel Room" style="width:100%; max-height:400px; object-fit:cover;" />
+      <figcaption class="meta">
+        Explore our lobby and rooms in high resolution.
+      </figcaption>
+    </figure>
+
+    <!-- Video Section -->
+    <figure class="video-card">
+      <video controls style="width:100%; border-radius:10px;">
+        <source src="video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <figcaption class="meta">
+        A quick 30-second walkthrough of our rooms and amenities.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+
+    <!-- TRUST & CREDIBILITY -->
+    <section class="container" id="reviews">
+      <h2>Trusted by Guests Worldwide</h2>
+      <p class="sub">We take your security and comfort seriously. Transparent policies and verified reviews build confidence.</p>
+      <div class="trust">
+        <div>
+          <div class="badges" aria-label="Security badges and awards">
+            <span class="badge">SSL Secured</span>
+            <span class="badge">PCI DSS Ready</span>
+            <span class="badge">Safe Travels 2025</span>
+            <span class="badge">Award: Best City Stay</span>
+          </div>
+          <div style="margin-top:14px; color:var(--muted)">Our booking flow uses modern encryption and transparently lists all taxes & fees before payment.</div>
+        </div>
+        <div class="reviews">
+          <div class="review">
+            <div class="stars" aria-label="5 out of 5">★★★★★</div>
+            “Flawless check‑in and spotless rooms. Booking direct got us a free breakfast and a late checkout.” — Priya
+          </div>
+          <div class="review">
+            <div class="stars">★★★★☆</div>
+            “Great location and staff. Loved the 360° tour before booking—what you see is what you get.” — Daniel
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ + POLICIES (Policy Transparency) -->
+    <!-- FAQ + POLICIES (Policy Transparency) -->
+    <section class="container" id="faq">
+      <h2>Policies & FAQ</h2>
+      <p class="sub">Clear, honest information—no surprises.</p>
+      <div class="accordion">
+        <details open>
+          <summary>📑 Booking & Cancellation Policy</summary>
+          <p>Flexible rate: free cancellation up to 48 hours before arrival. Non-refundable rate: pay less, changes not allowed. A valid card is required to guarantee your booking.</p>
+        </details>
+        <details>
+          <summary>🕒 Check-in / Check-out</summary>
+          <p>Check-in from 2:00 PM • Check-out by 12:00 PM. Direct bookings often receive complimentary late checkout when available.</p>
+        </details>
+        <details>
+          <summary>👨‍👩‍👧 Children & Extra Beds</summary>
+          <p>Children under 6 stay free using existing bedding. Rollaway beds available in suites (fee may apply).</p>
+        </details>
+        <details>
+          <summary>🐾 Pet Policy</summary>
+          <p>We are a pet-friendly hotel. Small and medium-sized pets are welcome for an additional cleaning fee. Please inform us in advance if you’re bringing your pet so we can prepare accordingly.</p>
+        </details>
+        <details>
+          <summary>💳 Payments & Security</summary>
+          <p>All transactions are processed over HTTPS. We support major cards and UPI on request at the front desk.</p>
+        </details>
+        <details>
+          <summary>💬 Live Chat & Support</summary>
+          <p>Chat with us instantly via <a href="https://wa.me/1234567890" target="_blank" rel="noopener">WhatsApp</a> or email <a href="mailto:stay@azurebay.example">stay@azurebay.example</a>.</p>
+        </details>
+      </div>
+    </section>
+
+
+    <!-- LOCAL GUIDE / BLOG (Value-Added Content + SEO) -->
+    <section class="container" id="guide">
+      <h2>Local Guide</h2>
+      <p class="sub">Hidden gems, coffee spots, and must‑see attractions—curated by our concierge.</p>
+      <div class="grid" style="grid-template-columns:repeat(3,1fr); gap:18px">
+        <article class="room">
+          <div class="media"><img src="https://images.unsplash.com/photo-1491555103944-7c647fd857e6?q=80&w=1200&auto=format&fit=crop" alt="Iconic city landmark at sunset"></div>
+          <div class="content">
+            <span class="pill">48‑Hour Itinerary</span>
+            <p>Make the most of a weekend: sunrise point, heritage walk, and the best street‑food lanes.</p>
+            <div class="price"><span></span><a class="cta" href="#">Read More</a></div>
+          </div>
+        </article>
+        <article class="room">
+          <div class="media"><img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=1200&auto=format&fit=crop" alt="Artisanal coffee cup"></div>
+          <div class="content">
+            <span class="pill">Coffee Map</span>
+            <p>The 7 best cafés within a 10‑minute walk of the hotel—latte art guaranteed.</p>
+            <div class="price"><span></span><a class="cta" href="#">Read More</a></div>
+          </div>
+        </article>
+        <article class="room">
+          <div class="media"><img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?q=80&w=1200&auto=format&fit=crop" alt="Riverside park trail"></div>
+          <div class="content">
+            <span class="pill">Parks & Trails</span>
+            <p>Morning runs or lazy strolls: the greenest corners near Riverside.</p>
+            <div class="price"><span></span><a class="cta" href="#">Read More</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MAP / LOCATION -->
+    <section class="container" id="map">
+      <h2>Find Us</h2>
+      <p class="sub">Central Business District, 5 minutes from the metro. <a href="#" itemprop="address">123 Harbor Lane, City</a></p>
+      <figure class="tour">
+        <!-- Replace with Google Maps iframe if desired (HTML only). Using a static image here to keep it light. -->
+        <img src="https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?q=80&w=1600&auto=format&fit=crop" alt="Neighborhood map placeholder" />
+        <figcaption class="meta">Open Maps: <a href="https://maps.google.com" target="_blank" rel="noopener">Get Directions</a></figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo"><span class="mark"></span>Riverstone Retreat</div>
+        <p class="sub" style="margin-top:10px">Book direct for members‑only rates and perks.</p>
+        <div class="band" style="margin:0; padding:10px 12px"><strong>Loyalty</strong>: Earn 5% back in credits on every direct booking.</div>
+      </div>
+      <div>
+        <h3 style="margin:0 0 8px; font-size:16px">Contact</h3>
+        <p class="sub">stay@riverstoneretreat.hotels<br/>+1‑202‑555‑0112</p>
+        <a class="cta" href="https://wa.me/1234567890" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      </div>
+      <div>
+        <h3 style="margin:0 0 8px; font-size:16px">Policies</h3>
+        <ul style="list-style:none; padding:0; margin:0; color:var(--muted)">
+          <li><a href="#faq">Booking & Cancellation</a></li>
+          <li><a href="#faq">Payment & Security</a></li>
+          <li><a href="#faq">Children & Extra Beds</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="margin:0 0 8px; font-size:16px">Follow</h3>
+        <div class="social">
+          <a href="#" aria-label="Instagram">📸</a>
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Twitter / X">✕</a>
+          <a href="#" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+    </div>
+    <div class="container copy">
+      <p>© <span itemprop="brand">Azure Bay Hotel</span>. All rights reserved. This site uses cookies to personalize content and remember your preferences. <a href="#">Privacy</a> • <a href="#">Terms</a></p>
+    </div>
+  </footer>
+</body>
+</html>
+
