@@ -138,9 +138,29 @@
       display: none;
     }
 /* Dine-in form inherits booking styles */
+/* Default (desktop) layout */
 .booking.dinein form {
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 1rem;
 }
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .booking.dinein form {
+    grid-template-columns: 1fr; /* stack everything */
+  }
+
+  .booking.dinein .field,
+  .booking.dinein button {
+    width: 100%;
+  }
+
+  .booking.dinein button {
+    margin-top: 0.5rem;
+  }
+}
+
 
 /* Smaller Map Section */
 .map-small {
