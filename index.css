@@ -137,3 +137,18 @@
     details > summary::-webkit-details-marker {
       display: none;
     }
+/* Dine-in form inherits booking styles */
+.booking.dinein form {
+  grid-template-columns: 1fr 1fr 1fr auto;
+}
+
+/* Smaller Map Section */
+.map-small {
+  max-width: 600px;
+  margin-inline: auto;
+}
+.map-small img {
+  height: 280px;
+  object-fit: cover;
+}
+
