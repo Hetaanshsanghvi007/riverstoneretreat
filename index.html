@@ -156,6 +156,52 @@
         </article>
       </div>
     </section>
+        <!-- DINING RESERVATION -->
+    <section class="container" id="dinein">
+      <h2>Dine-In Reservation</h2>
+      <p class="sub">Reserve a table at our in-house restaurant. Fresh cuisine, curated wines, and a cozy ambience await.</p>
+      
+      <div class="booking dinein" aria-labelledby="dinein-title">
+        <form method="post" action="/reserve-dinein" autocomplete="on">
+          <div class="field">
+            <label for="dine-date">Date</label>
+            <input type="date" id="dine-date" name="dine-date" required>
+          </div>
+          <div class="field">
+            <label for="dine-time">Time</label>
+            <input type="time" id="dine-time" name="dine-time" required>
+          </div>
+          <div class="field">
+            <label for="dine-guests">Guests</label>
+            <select id="dine-guests" name="dine-guests" required>
+              <option value="1">1 Person</option>
+              <option value="2" selected>2 People</option>
+              <option value="3">3 People</option>
+              <option value="4">4 People</option>
+              <option value="5">5 People</option>
+              <option value="6">6+ People</option>
+            </select>
+          </div>
+          <div class="field" style="align-self:end">
+            <button class="btn-primary" type="submit">Reserve Table</button>
+          </div>
+        </form>
+        <div class="booking-note">
+          🍽️ Fine dining experience • Reservation only • Special menu for members
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP / LOCATION -->
+    <section class="container" id="map">
+      <h2>Find Us</h2>
+      <p class="sub">Central Business District, 5 minutes from the metro. <a href="#" itemprop="address">123 Harbor Lane, City</a></p>
+      <figure class="tour map-small">
+        <img src="https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?q=80&w=1200&auto=format&fit=crop" alt="Neighborhood map placeholder" />
+        <figcaption class="meta">Open Maps: <a href="https://maps.google.com" target="_blank" rel="noopener">Get Directions</a></figcaption>
+      </figure>
+    </section>
+
 
     <!-- VISUALS: VIRTUAL TOUR + VIDEO -->
     <section class="container" aria-label="Visual tours">
